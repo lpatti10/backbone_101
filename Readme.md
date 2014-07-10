@@ -22,3 +22,9 @@ Bonus: Create an element on your page and play around with adding an event to yo
 Also, I will be updating the class resources link with more reading if anyone is interested - http://tiy-atlanta-js.github.io/resources.html
 
 This homework is due Monday morning. Create a project on Github called something like Backbone101 or similar.
+
+
+GIST: https://gist.github.com/twhitacre/fb085cb9e4a65f41e8b4
+
+SERVER/DB: http://tiy-atl-fe-server.herokuapp.com/collections/laura
+
