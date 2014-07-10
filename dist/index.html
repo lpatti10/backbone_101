@@ -16,26 +16,32 @@
   <body>
 
     <div class="hero-unit">
-      <h1>'Allo, 'Allo!</h1>
-      <p>You now have</p>
-      <ul>
-        <li>HTML5 Boilerplate</li>
-        <li>Normalize CSS</li>
-
-        <li>Sass</li>
-
-
-        <li>Modernizr</li>
-
-
-        <li>Bourbon & Neat</li>
-
-
-        <li>UnderscoreJS</li>
-
-      </ul>
-      <p>Don't forget to update your readme file!!</p>
+      <h1>Cool Students</h1>
+      <ul></ul>
     </div>
+
+
+
+
+
+     
+    <script type="text/template" id="student_list">
+        <% all_students.each( function(student) { %>
+            <li>Hi, my name is <%= student.get('name') %> and I am from <%= student.get('location') %></li>
+        <% }); %>
+    </script>
+
+
+
+
+
+
+
+
+
+
+
+
 
     <script src="scripts/vendor.js"></script>
 

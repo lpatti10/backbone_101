@@ -28,3 +28,5 @@ GIST: https://gist.github.com/twhitacre/fb085cb9e4a65f41e8b4
 
 SERVER/DB: http://tiy-atl-fe-server.herokuapp.com/collections/laura
 
+HELP: http://documentcloud.github.io/backbone/docs/todos.html
+

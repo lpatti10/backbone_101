@@ -24,36 +24,44 @@
   <body>
 
     <div class="hero-unit">
-      <h1>'Allo, 'Allo!</h1>
-      <p>You now have</p>
-      <ul>
-        <li>HTML5 Boilerplate</li>
-        <li>Normalize CSS</li>
-
-        <li>Sass</li>
-
-
-        <li>Modernizr</li>
-
-
-        <li>Bourbon & Neat</li>
-
-
-        <li>UnderscoreJS</li>
-
-      </ul>
-      <p>Don't forget to update your readme file!!</p>
+      <h1>Cool Students</h1>
+      <ul></ul>
     </div>
+
+
+
+
+
+     
+    <script type="text/template" id="student_list">
+        <% all_students.each( function(student) { %>
+            <li>Hi, my name is <%= student.get('name') %> and I am from <%= student.get('location') %></li>
+        <% }); %>
+    </script>
+
+
+
+
+
+
+
+
+
+
+
+
 
     <!-- build:js scripts/vendor.js -->
     <!-- bower:js -->
     <script src="../bower_components/jquery/dist/jquery.js"></script>
     <script src="../bower_components/underscore/underscore.js"></script>
-    <script src="../bower_components/backbone/backbone.js.js"></script>
+    <script src="../bower_components/backbone/backbone.js"></script>
     <!-- endbower -->
     <!-- endbuild -->
 
         <!-- build:js scripts/main.js -->
+        <script src="scripts/models/pants_model.js"></script>
+        <script src="scripts/views/closet_view.js"></script>
         <script src="scripts/main.js"></script>
         <!-- endbuild -->
 </body>

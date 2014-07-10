@@ -18,7 +18,7 @@ food_items.fetch()
 //The above entered into console created model instance for us!
 
 //setting new instance as reusable variable. Variables allow you to save to a collection later.
-var paerson1 = new Person({ name: 'Tim', drives: 'Honda' });
+var person1 = new Person({ name: 'Tim', drives: 'Honda' });
 
 tim = new Person();
 
@@ -56,7 +56,7 @@ var People = Backbone.Collection.extend({
 });
 
 1. created instance of tim (=model)
-2. add model of time to collection
+2. add model of tim to collection
 		People.add(tim)
 		(Backbone wants you to have control over where data goes; have to manually add models to collections)
 
@@ -93,9 +93,9 @@ michael.destroy()
 
 var StudentView = Backbone.View.extend({
 
-	tagname //shane recommends
+	tagName //shane recommends
 
-	classname  //shane recommends
+	className  //shane recommends
 
 	el: $('.hero-unit ul'),
 
@@ -129,13 +129,18 @@ all_students.fetch()
 
 
 //APP FOLDER STRUCTURE
-app > scripts > models > student_model.js //collections are declared with model.js vs. creating a collections folder
+app > scripts > models > student_model.js //collections are declared with model.js -or- create collections folder
 app > scripts > views > student_view.js
 app > scripts > main.js
 
 
-//PLANNING
+//FOOTER LINKS IN INDEX.html
+<script src="scripts/models/pants_model.js"></script>
+<script src="scripts/views/closet_view.js"></script>
+<script src="scripts/main.js"></script>
 
+
+//PLANNING
 1. How many views?
 2. What events can happen on each view?
 3. Can set up indiv. html pages for each view just for planning. These are converted to view-related underscore templates in index.html
