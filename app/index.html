@@ -30,7 +30,7 @@
 
 
     <div class="hero-unit">
-      <h1>hacking slacks</h1>
+      <h1>closet o' slacks</h1>
       <ul></ul>
     </div>
 
@@ -38,7 +38,8 @@
      
     <script type="text/template" id="pant_list">
         <% all_pants.each( function(pant) { %>
-            <li>These pants are made by <%= pant.get('brand') %> and are a size <%= pant.get('size') %></li>
+            <li>Pants made by <%= pant.get('brand') %> in size <%= pant.get('size') %>.</li>
+            <small>It is <%= pant.get('instock') %> that these are in stock.</small>
         <% }); %>
     </script>
 

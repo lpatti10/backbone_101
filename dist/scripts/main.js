@@ -1,10 +1,12 @@
-//I am setting up my model for pants
-var Pants = Backbone.Model.extend ({
+//............................MODEL..........................//
 
-//These properties will be attibuted to all instances of Pants model by default 
+//I am setting up my model for pants
+var Pant = Backbone.Model.extend ({
+
+//These properties (keys: values) will be attibuted to all instances of Pants model by default 
   defaults: {
     brand: '',
-    size: '',
+    size: 8,
     instock: true
   },
  
@@ -13,25 +15,36 @@ var Pants = Backbone.Model.extend ({
  
 //When creating an instance of a model, you can pass in the initial values of the attributes, which will be set on the model. If you define an initialize function, it will be invoked when the model is created. 
   initialize: function () {
-    var designer = this.get('brand');
-    console.log( designer + ' designed these pants.');
+    var brand = this.get('brand');
+    console.log( brand + ' designed these pants.');
   }
  
 });
- 
-// var JSStudents = Backbone.Collection.extend ({
- 
-//   model: Student,
+
+
+
+//............................COLLECTION..........................//
+
+//This is the initial set-up of the collection called Closet 
+var Closet = Backbone.Collection.extend ({
+
+//This is where we declare the model and DB our collection is based off of
+  model: Pant,
   url: "http://tiy-atl-fe-server.herokuapp.com/collections/laura"
  
-// });
- 
-// // Student Collection Instance
-// var all_students = new JSStudents();
-var StudentView = Backbone.View.extend({
+});
+
+
+//............................INSTANCE..........................//
+
+// Closet Collection Instance gets new lowercase variable name
+var all_pants = new Closet();
+
+
+var PantsView = Backbone.View.extend({
  
   template: function(model){
-    return _.template($('#student_list').html());
+    return _.template($('#pant_list').html());
   },
  
   el: $('.hero-unit ul'),
@@ -47,19 +60,20 @@ var StudentView = Backbone.View.extend({
   }
  
 });
-//http://tiy-atl-fe-server.herokuapp.com/collections/laura
 
 // Fetching the data & creating my view
-all_students.fetch().done(function () {
-  new StudentView( { collection: all_students } );
+all_pants.fetch().done(function () {
+  new PantsView( { collection: all_pants } );
 });
  
-// I could also create a new student
-var bob = new Student({ name: 'Bob' });
-all_students.add(bob).save();
+// New instance of pant model injecting brand name, repeated as variable (lowercase)
+var r13 = new Pant({ brand: 'R13' });
+//I also used this line in the console to commit new instances to DB 
+all_pants.add(r13).save();
  
  
-// I could also do some updating to my view
-var s = all_students.findWhere({name: "NAME"});
-s.set('location', 'Idaho');
-s.destroy();
+// I could also do some updating to my view. 
+var sizeConversion = all_pants.findWhere({brand: "R13"});
+// This should override the default value '8' for key 'size'
+sizeConversion.set('size', 29);
+sizeConversion.destroy();
