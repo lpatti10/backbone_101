@@ -6,6 +6,7 @@ all_pants.fetch().done(function () {
  
 // New instance of pant model injecting brand name, repeated as variable (lowercase)
 var r13 = new Pant({ brand: 'R13' });
+//I also used this line in the console to commit new instances to DB 
 all_pants.add(r13).save();
  
  

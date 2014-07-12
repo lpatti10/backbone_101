@@ -12,7 +12,7 @@ TimsCollection = Backbone.Collection.extend ({
 	
 });
 
-varfood_items = new TimsCollection();
+var food_items = new TimsCollection();
 
 food_items.fetch()
 //The above entered into console created model instance for us!
@@ -76,9 +76,7 @@ all_students.fetch()
 
 
 //SET (local only but requires us to send property back to storage)
-katlyn.set({
-	location: 'Tenn'
-})
+katlyn.set({ location: 'Tenn' })
 
 //POST REQUEST
 katlyn.save()
