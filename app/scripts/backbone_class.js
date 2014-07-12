@@ -62,10 +62,10 @@ var People = Backbone.Collection.extend({
 
 
 //ARCHITECTURE/PROCESS
-1. Create "Person" model (constructor) = model.js
+1. Create "Person" model (constructor) = xxx_model.js
 2. Create "Person" instance (of a model)
 3. Create "People" collection ("extend" onto collection array to use ... maps to model of Person)
-4. Create html underscore template in index.html
+4. Create html underscore template = index.html
 
 //EXTEND
 .extend() is what makes Backbone different than regular constructor/instances (extend originates from underscore method using .call)
@@ -93,7 +93,7 @@ michael.destroy()
 
 var StudentView = Backbone.View.extend({
 
-	tagName //shane recommends
+	tagName: "li", //shane recommends
 
 	className  //shane recommends
 
@@ -136,11 +136,11 @@ app > scripts > main.js
 
 //FOOTER LINKS IN INDEX.html
 <script src="scripts/models/pants_model.js"></script>
-<script src="scripts/views/closet_view.js"></script>
+<script src="scripts/views/pant_view.js"></script>
 <script src="scripts/main.js"></script>
 
 
-//PLANNING
+//SHANE'S RECOMMENDED PLANNING STEPS
 1. How many views?
 2. What events can happen on each view?
 3. Can set up indiv. html pages for each view just for planning. These are converted to view-related underscore templates in index.html

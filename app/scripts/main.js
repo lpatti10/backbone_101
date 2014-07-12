@@ -1,16 +1,16 @@
-//http://tiy-atl-fe-server.herokuapp.com/collections/laura
 
 // Fetching the data & creating my view
-all_students.fetch().done(function () {
-  new StudentView( { collection: all_students } );
+all_pants.fetch().done(function () {
+  new PantsView( { collection: all_pants } );
 });
  
-// I could also create a new student
-var bob = new Student({ name: 'Bob' });
-all_students.add(bob).save();
+// New instance of pant model injecting brand name, repeated as variable (lowercase)
+var r13 = new Pant({ brand: 'R13' });
+all_pants.add(r13).save();
  
  
-// I could also do some updating to my view
-var s = all_students.findWhere({name: "NAME"});
-s.set('location', 'Idaho');
-s.destroy();
+// I could also do some updating to my view. 
+var sizeConversion = all_pants.findWhere({brand: "R13"});
+// This should override the default value '8' for key 'size'
+sizeConversion.set('size', 29);
+sizeConversion.destroy();

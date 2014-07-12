@@ -1,7 +1,7 @@
-var StudentView = Backbone.View.extend({
+var PantsView = Backbone.View.extend({
  
   template: function(model){
-    return _.template($('#student_list').html());
+    return _.template($('#pant_list').html());
   },
  
   el: $('.hero-unit ul'),
